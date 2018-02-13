@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene debug>
+      <a-assests>
+        <a-asset-item id="bed" src="bed.gltf"></a-asset-item>
+        <img id="wall" src="wall.jpeg">
+      </a-assests>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere 
+      position="0 5.0 0" 
+      radius="0.4" 
+      material="flatShading: true; shader: flat; side: double; transparent: true; offset: [object Object]; repeat: [object Object]; color: #ffffff; height: 256.65"
+      id="lamp">
+      </a-sphere>
+
+      <a-cylinder 
+      position="-0.947 0.0 -1.675" 
+      radius="0.35" 
+      height="11.0" 
+      src="stairs.jpg" 
+      id="stair">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-0.94 0.0 -1.386" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 01">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-1.223 -0.528 -1.57" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 02">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-1.128 -0.981 -1.827" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 03">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-0.829 -1.421 -1.929" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 04">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-0.616 -1.911 -1.690" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 05">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-0.893 -2.443 -1.352" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 06">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-1.236 -2.931 -1.419" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 07">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-1.314 -3.45 -1.829" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 08">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-0.939 -3.950 -2.018" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 09">
+      </a-cylinder>
+
+      <a-cylinder 
+      position="-0.592 -4.492 -1.839" 
+      radius="0.7" 
+      height="0.2" 
+      src="stairs.jpg" 
+      id="stair 10">
+      </a-cylinder>
+
+   
+      <a-sky 
+      geometry="primitive: sphere; radius: 1000.0; height: 1000; segmentsHeight: 20; segmentsWidth: 64"
+      src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_bump.jpg"
+      material="repeat: [1.0 1.0]; color: #7a96ad; src: https://aframe.io/sample-assets/assets/images/wood/hardwood2_bump.jpg"
+      id="room">
+      </a-sky>
+
+      <a-ring 
+      side="double" 
+      position="-1 0.5 -1.746" 
+      rotation="90 40 0" 
+      radius-inner="0.7" 
+      radius-outer="5" 
+      height="1.0" 
+      src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg"
+      scale="1.565 1.49 1.0"
+      geometry="primitive: ring; radiusInner: 0.7; radiusOuter: 5; thetaLength: 180"
+      id="floor">
+      </a-ring>
+
+      <a-entity 
+      position="0 3 0" 
+      scale="1 1 1"
+      gltf-model="#bed">
+      </a-entity>
+
+      <a-entity 
+      gltf-model="#bed" 
+      position="0 2 0" 
+      scale="3 3 3" 
+      rotation="0 0 0" 
+      visible="true">
+      </a-entity>
+
+      <a-entity 
+      position="3.27 2.869 1.423" 
+      camera="active:false;userHeight:1.6" rotation="-90 -30 0" 
+      aframe-injected="" data-aframe-inspector="default-camera" id="camera">
+      </a-entity>
+
+      <a-light 
+      type="point" 
+      color="white" 
+      position="0 5 0">
+      </a-light>
+
+      <a-light 
+      type="point" 
+      color="white" 
+      position="0 1000 0">
+      </a-light>
+
+    </a-scene>
+  </body>
+</html>
