@@ -11,9 +11,9 @@
     <a-scene>
       <a-assests>
 
-      -- soft chair texture --
-          <a-asset-item id="chair-obj" src="Assets/chair_1.obj"></a-asset-item>
-          <a-asset-item id="chair-mtl" src="Assets/chair_1.mtl"></a-asset-item>
+      -- chair --
+          <a-asset-item id="chair-obj" src="Assets/Flow Chair obj/Flow Chair.obj"></a-asset-item>
+          <a-asset-item id="chair-mtl" src="Assets/Flow Chair obj/Flow Chair.mtl"></a-asset-item>
 
       -- bed --
           <a-asset-item id="bed-obj" src="Assets/fbde03.obj"></a-asset-item>
@@ -23,12 +23,13 @@
           <a-asset-item id="bedlamp-mtl" src="Assets/Lamp_001_OBJ/Lamp_001.mtl"></a-asset-item>
 
       -- Table --
+          <a-asset-item id="table-obj" src="Assets/tbl014_OBJ/tbl014.obj"></a-asset-item>
+          <a-asset-item id="table-mtl" src="Assets/tbl014_OBJ/tbl014.mtl"></a-asset-item>
 
       -- Sofa --
           <a-asset-item id="sofa-obj" src="Assets/73-sofa/Sofa.obj"></a-asset-item>
           <a-asset-item id="sofa-mtl" src="Assets/73-sofa/Sofa.mtl"></a-asset-item>
 
-      -- ceiling lamp --
 
       -- plant --
           <a-asset-item id="plant-obj" src="Assets/Chlorophytum_obj/D_Plant.obj"></a-asset-item>
@@ -43,14 +44,17 @@
           <a-asset-item id="door-mtl" src="Assets/InteriorDoorObj/InteriorDoor.mtl"></a-asset-item>
 
       -- Pictures --
+          <img id="pic01" src="img/pic01.png">
+          <img id="pic02" src="img/pic02.png">
+          <img id="pic03" src="img/pic03.png">
 
+      -- Desk --
+          <a-asset-item id="desk-obj" src="Assets/Tablel_arhiv_vray_obj/Table_obj.obj"></a-asset-item>
+          <a-asset-item id="desk-mtl" src="Assets/Tablel_arhiv_vray_obj/Table_obj.mtl"></a-asset-item>
 
-      -- box --
-
-      -- drawing easel --
-
-      -- shelf --
-
+      -- rack --
+          <a-asset-item id="rack-obj" src="Assets/dm_065_AlvarAalto106_OBJ/AlvarAalto106.obj"></a-asset-item>
+          <a-asset-item id="rack-mtl" src="Assets/dm_065_AlvarAalto106_OBJ/AlvarAalto106.mtl"></a-asset-item>
       -- rug texture --
           <img id="rug_texture" src="img/rug.jpg">
 
@@ -61,12 +65,14 @@
           <img id="stairs" src="img/stairs.jpg">
 
       -- ground texture --
-          <img id="groundTexture" src="https://aframe.io/sample-assets/assets/images/terrain/backgrounddetailed6.jpg">
+          <img id="groundTexture" src="img/ground.jpg">
       </a-assests>
 
 -- Controller --
         <a-entity position="0.5 2.0 0.7">
-            <a-camera universal-controls>
+            <a-camera universal-controls="fly: true;
+                 movementEasing: 15;
+                 movementAcceleration: 80;">
                 <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
                               radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
             </a-camera>
@@ -204,6 +210,54 @@
                 scale="1.4 1.4 1.4">
         </a-box>
 
+- desk -
+        <a-entity
+                scale="0.002 0.002 0.002"
+                position="8.065 0.538 2.066"
+                obj-model="mtl:#desk-mtl;obj:#desk-obj"
+                material="src: url(Assets/Tablel_arhiv_vray_obj/Table_10079_Alamo_Eiche_110519_05.jpg)"
+                id="desk"
+                rotation="0 0 0">
+        </a-entity>
+
+- Pictures -
+        <a-box
+                position="-4.725 4.906 8.666"
+                rotation="90 -30 180"
+                geometry="depth:2;height:0.05;width:4"
+                src="#pic01"
+                id="pic01"
+                scale="0.7 1.4 1.4">
+        </a-box>
+
+        <a-box
+                position="-3.295 7.596 9.138"
+                rotation="90 -20 180"
+                geometry="depth:2;height:0.05;width:4"
+                src="#pic02"
+                id="pic02">
+        </a-box>
+
+        <a-box
+                position="-7.284 6.141 6.439"
+                rotation="90 -40 180"
+                geometry="depth:2;height:0.05;width:4"
+                src="#pic03"
+                id="pic03"
+                scale="0.5 0.7 0.9"
+                class="intersectable">
+            <a-animation begin="click" attribute="position" from="-7.284 6.141 6.439" to= "-7.284 4.8 6.439" dur="3000"></a-animation>
+        </a-box>
+
+- Chair -
+
+        <a-entity
+                obj-model="mtl:Assets/Flow Chair obj/Flow Chair.mtl;obj:Assets/Flow Chair obj/Flow Chair.obj"
+                material="src: url(Assets/Flow Chair obj/narra.jpg)"
+                id="chair"
+                position="6.642 0.906 0.875"
+                scale="0.01 0.01 0.01">
+        </a-entity>
 
 -- First Floor --
 
@@ -237,6 +291,13 @@
         </a-light>
 
 - Table -
+        <a-entity
+                obj-model="mtl:Assets/tbl014_OBJ/tbl014.mtl;obj:Assets/tbl014_OBJ/tbl014.obj"
+                id="table"
+                position="-2.606 -9.499 1.397"
+                scale="0.002 0.002 0.001"
+                rotation="-90 90 0">
+        </a-entity>
 
 - Sofa -
         <a-entity
@@ -246,19 +307,23 @@
                 material="src: url(Assets/73-sofa/texturses/669170.jpg)"
                 id="sofa">
         </a-entity>
-- Chair -
+- rack -
 
-      <a-entity
-      obj-model="obj: #chair-obj; mtl: #chair-mtl"
-      id="chair">
-      </a-entity>
+        <a-entity
+                obj-model="mtl:Assets/dm_065_AlvarAalto106_OBJ/AlvarAalto106.mtl;obj:Assets/dm_065_AlvarAalto106_OBJ/AlvarAalto106.obj"
+                id="rack"
+                position="8.611 -9.507 2.861"
+                scale="0.004 0.004 0.004">
+        </a-entity>
 
 -- Cylinder Room --
         <a-entity
-            scale="1 1 1"
-            geometry="primitive:cylinder;height:20;radius:10"
-            material="side: double; src: #wall;repeat: 7 5"
-            id="room">
+                geometry="primitive:cylinder;height:20;radius:10"
+                material="side:double;src:#wall;repeat:8 5"
+                id="room">
+            <a-light
+                    type="ambient"
+                    color="#222"></a-light>
         </a-entity>
 
 
@@ -393,7 +458,9 @@
                 material="transparent:true;src:[object HTMLImageElement]"
                 id="window01"
                 scale="4 3 1.4"
-                collada-model="Assets/Janela+arqueada/model.dae"></a-collada-model>
+                collada-model="Assets/Janela+arqueada/model.dae">
+        </a-collada-model>
+
 
         <a-collada-model
                 src="#window01"
@@ -440,6 +507,7 @@
                 id="Door"
                 rotation="0 46.52417296462285 0">
         </a-entity>
+
 
 
 
