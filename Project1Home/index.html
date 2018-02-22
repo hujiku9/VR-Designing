@@ -7,10 +7,13 @@
         <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
         <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/master/src/controls/universal-controls.js"></script>
         <script src="src/function.js"></script>
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.js"></script>
   </head>
 
   <body>
     <a-scene>
+
+      THREE.Loader.Handlers.add( /\.tga$/i, new THREE.TGALoader() );
       <a-assests>
 
           <!-- chair -->
@@ -84,21 +87,7 @@
                     </a-camera>
 
 
-       <!-- camera movement -->
-            <script>
-                  var up_control = document.getElementById('stair 10');
-                  var down_control = document.getElementById('stair 01');
-                  var main_camera = document.getElementById('camera');
-      
-                  up_control.addEventListener("click",function()
-                  {           
-                        main_camera.setAttribute('position',{x:2,y:2,z:2});
-                  });
-                  down_control.addEventListener("click",function()
-                  {           
-                        main_camera.setAttribute('position',{x:2,y:-7,z:2});
-                  });
-            </script>
+       
 
 
 
@@ -535,7 +524,21 @@
                         rotation="0 46.52417296462285 0">
                 </a-entity>
 
-
+      <!-- camera movement -->
+            <script>
+                  var up_control = document.getElementById('stair 10');
+                  var down_control = document.getElementById('stair 01');
+                  var main_camera = document.getElementById('camera');
+      
+                  up_control.addEventListener("click",function()
+                  {           
+                        main_camera.setAttribute('position',{x:2,y:2,z:2});
+                  });
+                  down_control.addEventListener("click",function()
+                  {           
+                        main_camera.setAttribute('position',{x:2,y:-7,z:2});
+                  });
+            </script>
 
 
 
