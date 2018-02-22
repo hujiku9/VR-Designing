@@ -5,11 +5,17 @@
         <title>Home! - A-Frame</title>
         <meta name="description" content="Hello, World! - A-Frame">
         <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/master/src/controls/universal-controls.js"></script>
+        <script src="src/function.js"></script>
   </head>
 
   <body>
     <a-scene>
       <a-assests>
+
+          <!-- click to move -->
+            <a-mixin id="checkpoint"></a-mixin>
+            <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
 
           <!-- chair -->
               <a-asset-item id="chair-obj" src="Assets/Flow Chair obj/Flow Chair.obj"></a-asset-item>
@@ -69,32 +75,37 @@
           </a-assests>
 
         <!-- Controller -->
-                <a-entity position="0.5 1.6 0.7"
-                          id="camera">
-                    <a-camera universal-controls="fly: true;
-                         movementEasing: 15;
-                         movementAcceleration: 80;">
+
+                    <a-camera universal-controls
+                              id="camera" 
+                              position="6.5 -7 6.5"
+                              cursor-visible="true"
+                              cursor-scale="2"
+                              cursor-color="#0095DD"
+                              cursor-opacity="0.5">
                         <a-entity raycaster="far: 150; objects: .intersectable" cursor geometry="primitive: ring; radiusOuter: 0.015;
                                       radiusInner: 0.01; segmentsTheta: 32" material="color: #283644; shader: flat" position="0 0 -0.75"></a-entity>
                     </a-camera>
-                </a-entity>
 
-        <!-- camera moving -->
 
-                  <script>
-                        var up = document.getElementById('stair 10');
-                        var down = document.getElementById('stair 01');
-                        var camera = document.getElementById('camera');
+       <!-- camera movement -->
+            <script>
+                  var up_control = document.getElementById('stair 10');
+                  var down_control = document.getElementById('stair 01');
+                  var main_camera = document.getElementById('camera');
       
-                        up.addEventListener("click",function()
-                        {           
-                              camera.setAttribute('position',{x:2,y:2,z:2});
-                        });
-                        down.addEventListener("click",function()
-                        {           
-                              camera.setAttribute('position',{x:2,y:-7,z:2});
-                        });
-                  </script>
+                  up_control.addEventListener("click",function()
+                  {           
+                        main_camera.setAttribute('position',{x:2,y:2,z:2});
+                  });
+                  down_control.addEventListener("click",function()
+                  {           
+                        main_camera.setAttribute('position',{x:2,y:-7,z:2});
+                  });
+            </script>
+
+
+
 
         <!-- sky -->
               <a-sky
@@ -466,6 +477,7 @@
               class="intersectable">
               </a-cylinder>
 
+              
         <!-- Windows -->
 
                 <a-collada-model
