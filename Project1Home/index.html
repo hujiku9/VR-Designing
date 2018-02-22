@@ -13,10 +13,6 @@
     <a-scene>
       <a-assests>
 
-          <!-- click to move -->
-            <a-mixin id="checkpoint"></a-mixin>
-            <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
-
           <!-- chair -->
               <a-asset-item id="chair-obj" src="Assets/Flow Chair obj/Flow Chair.obj"></a-asset-item>
               <a-asset-item id="chair-mtl" src="Assets/Flow Chair obj/Flow Chair.mtl"></a-asset-item>
@@ -121,7 +117,7 @@
               position="-4.392 0.7 -1.631"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 01">
               </a-cylinder>
 
@@ -129,7 +125,7 @@
               position="-5.057 0.85 -1.064"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 02"
               geometry="height:0.7">
               </a-cylinder>
@@ -138,7 +134,7 @@
               position="-5.725 0.8 -0.524"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 03"
               geometry="height:0.6">
               </a-cylinder>
@@ -147,7 +143,7 @@
               position="-6.395 0.7 0.036"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 04">
               </a-cylinder>
 
@@ -155,7 +151,7 @@
               position="-7.072 0.8 0.554"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 05"
               geometry="height:0.6">
               </a-cylinder>
@@ -164,7 +160,7 @@
               position="-7.78 0.85 1.137"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 06"
               geometry="height:0.7">
               </a-cylinder>
@@ -173,7 +169,7 @@
               position="-8.457 0.7 1.702"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 07">
               </a-cylinder>
 
@@ -181,7 +177,7 @@
               position="-9.13 0.8 2.21"
               radius="0.3"
               height="0.4"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="guard 08"
               geometry="height:0.6">
               </a-cylinder>
@@ -367,12 +363,14 @@
       </a-ring>
 
         <!-- stairs -->
-              <a-cylinder
-                position="-1 0.0 -3.6"
-                radius="0.35"
-                height="20.0"
-                src="img/stairs.jpg"
-                id="stair">
+              <a-cylinder 
+              side="double" 
+              position="-1 0 -3.6" 
+              radius="0.35" 
+              height="20.0" 
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
+              id="stair" 
+              geometry="primitive: cylinder; radius: 0.35; height: 20">
               </a-cylinder>
 
               <a-cylinder
@@ -381,7 +379,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 01"
               class="intersectable">
               </a-cylinder>
@@ -392,7 +390,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 02">
               </a-cylinder>
 
@@ -402,7 +400,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 03">
               </a-cylinder>
 
@@ -412,7 +410,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 04">
               </a-cylinder>
 
@@ -422,7 +420,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 05">
               </a-cylinder>
 
@@ -432,7 +430,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="#stairs"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 06">
               </a-cylinder>
 
@@ -442,7 +440,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 07">
               </a-cylinder>
 
@@ -452,7 +450,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 08">
               </a-cylinder>
 
@@ -462,7 +460,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg" 
               id="stair 09">
               </a-cylinder>
 
@@ -472,7 +470,7 @@
               scale="3 1 1"
               radius="0.7"
               height="0.2"
-              src="img/stairs.jpg"
+              src="https://aframe.io/sample-assets/assets/images/wood/hardwood2_diffuse.jpg"
               id="stair 10"
               class="intersectable">
               </a-cylinder>
