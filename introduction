@@ -1,0 +1,11 @@
+This Project is made by Unreal Engine 4. 
+I am using Version 4.19. 
+
+Plan of Water elevation:
+  2048 * 2048 Heightmap with moutains, ground and sea. ( chose the heightmap of Norway, might change to a U.S one)
+  Build my own textures such as sand, ground, rocks, etc. Editor them as function-materials, so it could change by height changing.
+  Player modeler is a FPS shooter, he can shoot the ball, and the bults can be reflected by all of the surfaces.(Might delete it later)
+  A lolt of models add (trees, grass, flowers, rocks, and maybe a wooden house)
+  Using some cool 
+  There are 4 modes of the landscrirt: frozen(winter), rain(summer), windy(fall), and normal(spring). Models will change in different mode also.
+  Add the tempreture and height on UI. Both can change by the height changes. There is a formula. 
