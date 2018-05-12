@@ -14,22 +14,24 @@ Interface:
 
 
 There are five UI buttons on the screen you can click:
-		Rotation: click to start the model to rotate, and click one more time to stop.
-		Bones: click to show the bones model.
-		
-    ![sceenshot3](https://user-images.githubusercontent.com/25393861/39956772-98d0a69a-55ac-11e8-9871-b9c197ae7ac8.PNG)
 
-		Blood: click to show the blood vessel model.
+Rotation: click to start the model to rotate, and click one more time to stop.
+Bones: click to show the bones model.
 		
-    ![screenshot4](https://user-images.githubusercontent.com/25393861/39956775-a51d2d2e-55ac-11e8-818d-9e63849a7d76.PNG)
+  ![sceenshot3](https://user-images.githubusercontent.com/25393861/39956772-98d0a69a-55ac-11e8-9871-b9c197ae7ac8.PNG)
 
-		Muscle: click to show the muscle model.
+Blood: click to show the blood vessel model.
 		
-    ![sceenshot1](https://user-images.githubusercontent.com/25393861/39956764-6e72f434-55ac-11e8-8386-3843b2286bfc.PNG)
+   ![blood](https://user-images.githubusercontent.com/25393861/39956816-54fb741c-55ad-11e8-92c1-4857f62868a1.jpg)
 
-		Digestive System: click to show the digestive system model.
+
+Muscle: click to show the muscle model.
 		
-    ![screenshot2](https://user-images.githubusercontent.com/25393861/39956767-89987540-55ac-11e8-836e-126db61009d1.PNG)
+   ![sceenshot1](https://user-images.githubusercontent.com/25393861/39956764-6e72f434-55ac-11e8-8386-3843b2286bfc.PNG)
+
+Digestive System: click to show the digestive system model.
+		
+   ![screenshot2](https://user-images.githubusercontent.com/25393861/39956767-89987540-55ac-11e8-836e-126db61009d1.PNG)
 
 
 
