@@ -15,7 +15,11 @@ Interface:
 
 There are five UI buttons on the screen you can click:
 
+![screen5](https://user-images.githubusercontent.com/25393861/39956839-ab819d98-55ad-11e8-9637-df94f1807f71.PNG)
+
+
 Rotation: click to start the model to rotate, and click one more time to stop.
+
 Bones: click to show the bones model.
 		
   ![sceenshot3](https://user-images.githubusercontent.com/25393861/39956772-98d0a69a-55ac-11e8-9871-b9c197ae7ac8.PNG)
